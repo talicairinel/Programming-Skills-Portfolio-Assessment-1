@@ -1,3 +1,4 @@
+#include <cctype>
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -56,8 +57,10 @@ int main() {
 
         // Normalize string to lowercase to handle case variations gracefully
         string lowerInput = input;
-        transform(lowerInput.begin(), lowerInput.end(), lowerInput.begin(), ::tolower);
-
+        transform(lowerInput.begin(), lowerInput.end(), lowerInput.begin(),
+          [](unsigned char c) {
+              return static_cast<char>(std::tolower(c));
+          });
         if (lowerInput == "quit" || lowerInput == "exit") {
             cout << "Goodbye!\n";
             break;
