@@ -6,7 +6,7 @@ Three C++ console programs written for the Programming Skills Portfolio.
 ## Repository structure
 
 ```
-Programming Skills Portfolio/
+Programming Skills Portfolio Assessment 1/
 ├── 01-CO2-Calculator/
 │   └── challenge1_co2.cpp
 ├── 02-Alexa-Tell-Me-A-Joke/
