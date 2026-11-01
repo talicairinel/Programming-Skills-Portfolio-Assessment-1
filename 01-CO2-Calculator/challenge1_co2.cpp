@@ -31,11 +31,10 @@ string getFuelType() {
         cout << "Enter fuel type (Petrol / Diesel): ";
         if (!getline(cin, fuel)) exit(1); // Whole line read; stop if input closed
         // Convert input to lowercase for case-insensitive comparison
-      transform(fuel.begin(), fuel.end(), fuel.begin(),
-          [](unsigned char c) {
-              return static_cast<char>(std::tolower(c));
-          });
-          });
+     transform(fuel.begin(), fuel.end(), fuel.begin(),
+                  [](unsigned char c) {
+                      return static_cast<char>(std::tolower(c));
+                  });
         if (fuel == "petrol" || fuel == "diesel") {
             return fuel;
         }
