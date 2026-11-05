@@ -15,11 +15,11 @@ private:
     bool isBorrowed;
 
 public:
-    // Constructor to initialize Book object
+    // Constructor to initialize the Book object
     Book(string t, string a, int p, string i, bool b)
         : title(t), author(a), pages(p), id(i), isBorrowed(b) {}
 
-    // Getters
+    // Getters 
     string getId() const { return id; }
     string getTitle() const { return title; }
     string getAuthor() const { return author; }
@@ -46,7 +46,7 @@ public:
     }
 };
 
-// Load books from CSV-formatted text file
+// Load books from CSV-formatted text file 
 vector<Book> loadBooks(const string& filename) {
     vector<Book> library;
     ifstream file(filename);
@@ -154,7 +154,7 @@ int main() {
                 } else {
                     book->setBorrowedStatus(true);
                     saveBooks(filename, library);
-                    cout << "You have successfully borrowed '" << book->getTitle() << "'.\n";
+                    cout << "You have successfully borrowed. '" << book->getTitle() << "'.\n";
                 }
             } else if (choice == 4) {
                 if (!book->getBorrowedStatus()) {
